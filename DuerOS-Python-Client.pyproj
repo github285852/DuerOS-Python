@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69d8a4a6-0970-450f-b712-0ae6f86bea7f}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>app\snowboy\demo.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>
+    </InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app\app_config.py" />
+    <Compile Include="app\auth.py" />
+    <Compile Include="app\enter_trigger_main.py" />
+    <Compile Include="app\framework\mic.py" />
+    <Compile Include="app\framework\player.py" />
+    <Compile Include="app\framework\__init__.py" />
+    <Compile Include="app\snowboy\demo.py" />
+    <Compile Include="app\snowboy\demo2.py" />
+    <Compile Include="app\snowboy\demo3.py" />
+    <Compile Include="app\snowboy\demo_arecord.py" />
+    <Compile Include="app\snowboy\demo_threaded.py" />
+    <Compile Include="app\snowboy\snowboydecoder.py" />
+    <Compile Include="app\snowboy\snowboydecoder_arecord.py" />
+    <Compile Include="app\snowboy\snowboydetect.py" />
+    <Compile Include="app\snowboy\snowboythreaded.py" />
+    <Compile Include="app\snowboy\__init__.py" />
+    <Compile Include="app\utils\mic_data_saver.py" />
+    <Compile Include="app\utils\prompt_tone.py" />
+    <Compile Include="app\utils\__init__.py" />
+    <Compile Include="app\wakeup_trigger_main.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="sdk\auth.py" />
+    <Compile Include="sdk\configurate.py" />
+    <Compile Include="sdk\dueros_core.py" />
+    <Compile Include="sdk\interface\alerts.py" />
+    <Compile Include="sdk\interface\audio_player.py" />
+    <Compile Include="sdk\interface\notifications.py" />
+    <Compile Include="sdk\interface\playback_controller.py" />
+    <Compile Include="sdk\interface\screen_display.py" />
+    <Compile Include="sdk\interface\speaker.py" />
+    <Compile Include="sdk\interface\speech_recognizer.py" />
+    <Compile Include="sdk\interface\speech_synthesizer.py" />
+    <Compile Include="sdk\interface\system.py" />
+    <Compile Include="sdk\interface\__init__.py" />
+    <Compile Include="sdk\sdk_config.py" />
+    <Compile Include="sdk\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\snowboy\requirements.txt" />
+    <Content Include="app\snowboy\_snowboydetect.so" />
+    <Content Include="readme_resources\代码结构.png" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app" />
+    <Folder Include="app\framework" />
+    <Folder Include="app\snowboy" />
+    <Folder Include="app\utils" />
+    <Folder Include="readme_resources" />
+    <Folder Include="sdk" />
+    <Folder Include="sdk\interface" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

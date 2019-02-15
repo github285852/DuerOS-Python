@@ -12,9 +12,12 @@ import datetime
 
 import sdk.configurate as configurate
 
+import asyncio
+
 # 开发者默认注册信息
 CLIENT_ID = "5GFgMRfHOhIvI0B8AZB78nt676FeWA9n"
 CLIENT_SECRET = "eq2eCNfbtOrGwdlA4vB1N1EaiwjBMu7i"
+
 
 # 百度token服务器url
 TOKEN_URL = 'https://openapi.baidu.com/oauth/2.0/token'
@@ -95,6 +98,9 @@ def login(client_id, client_secret):
     :param client_secret: 开发者信息
     :return:
     '''
+    #tornado 5 中引入asyncio.set_event_loop即可
+    asyncio.set_event_loop(asyncio.new_event_loop())
+
     application = tornado.web.Application([(r".*", MainHandler,
                                             dict(output=configurate.DEFAULT_CONFIG_FILE, client_id=client_id,
                                                  client_secret=client_secret))])

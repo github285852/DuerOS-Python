@@ -5,8 +5,8 @@ OAuth2.0认证
 import sdk.auth as auth
 
 # 开发者注册信息
-CLIENT_ID = 'XXXXX'
-CLIENT_SECRET = 'XXXXXX'
+CLIENT_ID = 'lOr0aAmOmQqT9wHrt40Rqxyb1PqBtwL7'
+CLIENT_SECRET = '4iMU7auqVRHBQPBY6LhEB1494EYcex67'
 
 
 

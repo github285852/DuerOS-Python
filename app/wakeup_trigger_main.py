@@ -10,7 +10,8 @@ import time
 try:
     import Queue as queue
 except ImportError:
-    import queueg
+#    import queueg
+    import queue
 
 import logging
 import app.app_config as app_config
@@ -198,7 +199,7 @@ def main():
         唤醒回调
         :return:
         '''
-        print '[小度]已唤醒,我能为你做些什么..........'
+        print('[小度]已唤醒,我能为你做些什么..........')
         # 唤醒态提示音
         prompt_tone_player.play()
         dueros.listen()
@@ -210,7 +211,7 @@ def main():
     snowboy.start()
     audio.start()
 
-    print '请说[小度小度]来唤醒我.......'
+    print('请说[小度小度]来唤醒我.......')
 
     while True:
         try:
